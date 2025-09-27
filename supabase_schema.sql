@@ -208,7 +208,7 @@ CREATE POLICY "Users can delete own daily goals" ON daily_goals
 
 -- Insert default categories for new users (this would be handled in the app)
 -- These are just examples of what the default categories might look like
-INSERT INTO categories (user_id, name, color, icon, parent_id) VALUES
+-- INSERT INTO categories (user_id, name, color, icon, parent_id) VALUES
 -- This would be done programmatically when a user signs up
 -- (uuid_generate_v4(), 'Work', '#007AFF', 'briefcase.fill', NULL),
 -- (uuid_generate_v4(), 'Personal', '#FF3B30', 'person.fill', NULL),
