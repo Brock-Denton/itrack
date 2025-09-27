@@ -13,7 +13,7 @@ class TimerManager: ObservableObject {
         loadTimerState()
         if isTimerRunning, let timer = currentTimer {
             if let startTime = timer.startTime {
-                if let lastActive = UserDefaults.standard.object(forKey: "lastActiveDate") as? Date {
+                if let lastActive = UserDefaults.standard.date(forKey: "lastActiveDate") {
                     let elapsedInBackground = Date().timeIntervalSince(lastActive)
                     currentDuration = timer.totalDuration + elapsedInBackground
                 }
