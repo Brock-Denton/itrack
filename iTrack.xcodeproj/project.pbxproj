@@ -16,38 +16,38 @@
 			containerPortal = 334EA8252E7DCEF700899F17 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 334EA82C2E7DCEF700899F17;
-			remoteInfo = PhotoBridge;
+			remoteInfo = iTrack;
 		};
 		334EA8492E7DCEF900899F17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 334EA8252E7DCEF700899F17 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 334EA82C2E7DCEF700899F17;
-			remoteInfo = PhotoBridge;
+			remoteInfo = iTrack;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		334EA82D2E7DCEF700899F17 /* PhotoBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		334EA83E2E7DCEF900899F17 /* PhotoBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		334EA8482E7DCEF900899F17 /* PhotoBridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoBridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		334EA82D2E7DCEF700899F17 /* iTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		334EA83E2E7DCEF900899F17 /* iTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		334EA8482E7DCEF900899F17 /* iTrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		334EA8612E7DD5F200899F17 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		334EA82F2E7DCEF700899F17 /* PhotoBridge */ = {
+		334EA82F2E7DCEF700899F17 /* iTrack */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PhotoBridge;
+			path = iTrack;
 			sourceTree = "<group>";
 		};
-		334EA8412E7DCEF900899F17 /* PhotoBridgeTests */ = {
+		334EA8412E7DCEF900899F17 /* iTrackTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PhotoBridgeTests;
+			path = iTrackTests;
 			sourceTree = "<group>";
 		};
-		334EA84B2E7DCEF900899F17 /* PhotoBridgeUITests */ = {
+		334EA84B2E7DCEF900899F17 /* iTrackUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PhotoBridgeUITests;
+			path = iTrackUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -80,9 +80,9 @@
 		334EA8242E7DCEF700899F17 = {
 			isa = PBXGroup;
 			children = (
-				334EA82F2E7DCEF700899F17 /* PhotoBridge */,
-				334EA8412E7DCEF900899F17 /* PhotoBridgeTests */,
-				334EA84B2E7DCEF900899F17 /* PhotoBridgeUITests */,
+				334EA82F2E7DCEF700899F17 /* iTrack */,
+				334EA8412E7DCEF900899F17 /* iTrackTests */,
+				334EA84B2E7DCEF900899F17 /* iTrackUITests */,
 				334EA82E2E7DCEF700899F17 /* Products */,
 				334EA8612E7DD5F200899F17 /* .gitignore */,
 			);
@@ -91,9 +91,9 @@
 		334EA82E2E7DCEF700899F17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				334EA82D2E7DCEF700899F17 /* PhotoBridge.app */,
-				334EA83E2E7DCEF900899F17 /* PhotoBridgeTests.xctest */,
-				334EA8482E7DCEF900899F17 /* PhotoBridgeUITests.xctest */,
+				334EA82D2E7DCEF700899F17 /* iTrack.app */,
+				334EA83E2E7DCEF900899F17 /* iTrackTests.xctest */,
+				334EA8482E7DCEF900899F17 /* iTrackUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		334EA82C2E7DCEF700899F17 /* PhotoBridge */ = {
+		334EA82C2E7DCEF700899F17 /* iTrack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 334EA8522E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "PhotoBridge" */;
+			buildConfigurationList = 334EA8522E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "iTrack" */;
 			buildPhases = (
 				334EA8292E7DCEF700899F17 /* Sources */,
 				334EA82A2E7DCEF700899F17 /* Frameworks */,
@@ -114,18 +114,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				334EA82F2E7DCEF700899F17 /* PhotoBridge */,
+				334EA82F2E7DCEF700899F17 /* iTrack */,
 			);
-			name = PhotoBridge;
+			name = iTrack;
 			packageProductDependencies = (
 			);
-			productName = PhotoBridge;
-			productReference = 334EA82D2E7DCEF700899F17 /* PhotoBridge.app */;
+			productName = iTrack;
+			productReference = 334EA82D2E7DCEF700899F17 /* iTrack.app */;
 			productType = "com.apple.product-type.application";
 		};
-		334EA83D2E7DCEF900899F17 /* PhotoBridgeTests */ = {
+		334EA83D2E7DCEF900899F17 /* iTrackTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 334EA8552E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "PhotoBridgeTests" */;
+			buildConfigurationList = 334EA8552E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "iTrackTests" */;
 			buildPhases = (
 				334EA83A2E7DCEF900899F17 /* Sources */,
 				334EA83B2E7DCEF900899F17 /* Frameworks */,
@@ -137,18 +137,18 @@
 				334EA8402E7DCEF900899F17 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				334EA8412E7DCEF900899F17 /* PhotoBridgeTests */,
+				334EA8412E7DCEF900899F17 /* iTrackTests */,
 			);
-			name = PhotoBridgeTests;
+			name = iTrackTests;
 			packageProductDependencies = (
 			);
-			productName = PhotoBridgeTests;
-			productReference = 334EA83E2E7DCEF900899F17 /* PhotoBridgeTests.xctest */;
+			productName = iTrackTests;
+			productReference = 334EA83E2E7DCEF900899F17 /* iTrackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		334EA8472E7DCEF900899F17 /* PhotoBridgeUITests */ = {
+		334EA8472E7DCEF900899F17 /* iTrackUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 334EA8582E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "PhotoBridgeUITests" */;
+			buildConfigurationList = 334EA8582E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "iTrackUITests" */;
 			buildPhases = (
 				334EA8442E7DCEF900899F17 /* Sources */,
 				334EA8452E7DCEF900899F17 /* Frameworks */,
@@ -160,13 +160,13 @@
 				334EA84A2E7DCEF900899F17 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				334EA84B2E7DCEF900899F17 /* PhotoBridgeUITests */,
+				334EA84B2E7DCEF900899F17 /* iTrackUITests */,
 			);
-			name = PhotoBridgeUITests;
+			name = iTrackUITests;
 			packageProductDependencies = (
 			);
-			productName = PhotoBridgeUITests;
-			productReference = 334EA8482E7DCEF900899F17 /* PhotoBridgeUITests.xctest */;
+			productName = iTrackUITests;
+			productReference = 334EA8482E7DCEF900899F17 /* iTrackUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 334EA8282E7DCEF700899F17 /* Build configuration list for PBXProject "PhotoBridge" */;
+			buildConfigurationList = 334EA8282E7DCEF700899F17 /* Build configuration list for PBXProject "iTrack" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -206,9 +206,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				334EA82C2E7DCEF700899F17 /* PhotoBridge */,
-				334EA83D2E7DCEF900899F17 /* PhotoBridgeTests */,
-				334EA8472E7DCEF900899F17 /* PhotoBridgeUITests */,
+				334EA82C2E7DCEF700899F17 /* iTrack */,
+				334EA83D2E7DCEF900899F17 /* iTrackTests */,
+				334EA8472E7DCEF900899F17 /* iTrackUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -265,12 +265,12 @@
 /* Begin PBXTargetDependency section */
 		334EA8402E7DCEF900899F17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 334EA82C2E7DCEF700899F17 /* PhotoBridge */;
+			target = 334EA82C2E7DCEF700899F17 /* iTrack */;
 			targetProxy = 334EA83F2E7DCEF900899F17 /* PBXContainerItemProxy */;
 		};
 		334EA84A2E7DCEF900899F17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 334EA82C2E7DCEF700899F17 /* PhotoBridge */;
+			target = 334EA82C2E7DCEF700899F17 /* iTrack */;
 			targetProxy = 334EA8492E7DCEF900899F17 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -395,16 +395,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PhotoBridge/PhotoBridge.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iTrack/iTrack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhotoBridge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = FAS9V6M3AJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoBridge deletes photos after moving them (they remain in Recently Deleted)";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PhotoBridge needs access to your photos to move them to Google Drive";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "iTrack deletes photos after moving them (they remain in Recently Deleted)";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "iTrack needs access to your photos to move them to Google Drive";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -420,7 +420,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.PhotoBridge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itracking.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -436,16 +436,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PhotoBridge/PhotoBridge.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iTrack/iTrack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhotoBridge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = FAS9V6M3AJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoBridge deletes photos after moving them (they remain in Recently Deleted)";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PhotoBridge needs access to your photos to move them to Google Drive";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "iTrack deletes photos after moving them (they remain in Recently Deleted)";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "iTrack needs access to your photos to move them to Google Drive";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -461,7 +461,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.PhotoBridge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itracking.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -483,14 +483,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.PhotoBridgeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itracking.appTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoBridge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoBridge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iTrack";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
@@ -506,14 +506,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.PhotoBridgeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itracking.appTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoBridge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoBridge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iTrack";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
@@ -528,14 +528,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.PhotoBridgeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itracking.appUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = PhotoBridge;
+				TEST_TARGET_NAME = iTrack;
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
@@ -550,14 +550,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.PhotoBridgeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itracking.appUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = PhotoBridge;
+				TEST_TARGET_NAME = iTrack;
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
@@ -565,7 +565,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		334EA8282E7DCEF700899F17 /* Build configuration list for PBXProject "PhotoBridge" */ = {
+		334EA8282E7DCEF700899F17 /* Build configuration list for PBXProject "iTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				334EA8502E7DCEF900899F17 /* Debug */,
@@ -574,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		334EA8522E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "PhotoBridge" */ = {
+		334EA8522E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "iTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				334EA8532E7DCEF900899F17 /* Debug */,
@@ -583,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		334EA8552E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "PhotoBridgeTests" */ = {
+		334EA8552E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "iTrackTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				334EA8562E7DCEF900899F17 /* Debug */,
@@ -592,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		334EA8582E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "PhotoBridgeUITests" */ = {
+		334EA8582E7DCEF900899F17 /* Build configuration list for PBXNativeTarget "iTrackUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				334EA8592E7DCEF900899F17 /* Debug */,
