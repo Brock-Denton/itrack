@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject private var userManager = UserManager()
+    @ObservedObject var userManager: UserManager
     @State private var newUsername = ""
     @State private var showingCreateUser = false
     

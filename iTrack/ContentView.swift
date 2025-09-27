@@ -15,7 +15,7 @@ struct ContentView: View {
             if userManager.currentUser != nil {
                 MainTabView()
             } else {
-                LoginView()
+                LoginView(userManager: userManager)
             }
         }
         .environmentObject(userManager)
