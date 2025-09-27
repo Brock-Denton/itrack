@@ -1,5 +1,5 @@
 import SwiftUI
-import GoogleSignIn
+// import GoogleSignIn
 
 struct LoginView: View {
     @EnvironmentObject var authManager: AuthenticationManager

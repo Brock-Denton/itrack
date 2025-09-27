@@ -1,6 +1,6 @@
 import Foundation
 import SwiftUI
-import Supabase
+// import Supabase
 
 @MainActor
 class DataManager: ObservableObject {

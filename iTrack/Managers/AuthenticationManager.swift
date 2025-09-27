@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
-import Supabase
-import GoogleSignIn
+// import Supabase
+// import GoogleSignIn
 
 @MainActor
 class AuthenticationManager: ObservableObject {

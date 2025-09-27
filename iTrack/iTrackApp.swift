@@ -1,6 +1,6 @@
 import SwiftUI
-import Supabase
-import GoogleSignIn
+// import Supabase
+// import GoogleSignIn
 
 @main
 struct iTrackApp: App {
