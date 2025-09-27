@@ -83,8 +83,6 @@
 			dependencies = (
 			);
 			name = iTrack;
-			packageProductDependencies = (
-			);
 			productName = iTrack;
 			productReference = 1A2B3C4D5E6F788E /* iTrack.app */;
 			productType = "com.apple.product-type.application";
@@ -113,8 +111,6 @@
 				Base,
 			);
 			mainGroup = 1A2B3C4D5E6F7885;
-			packageReferences = (
-			);
 			productRefGroup = 1A2B3C4D5E6F788F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
