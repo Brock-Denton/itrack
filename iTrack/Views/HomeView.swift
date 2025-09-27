@@ -6,31 +6,57 @@ struct HomeView: View {
     @StateObject private var userManager = UserManager()
     @State private var selectedCategory: Category?
     @State private var showingSubcategories = false
+    @State private var showingAddCategory = false
+    @State private var showingRenameCategory = false
+    @State private var currentRound = 1
+    @State private var categoryToRename: Category?
+    @State private var newCategoryName = ""
     
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
                 VStack {
-                    Text("iTrack")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                    HStack {
+                        Text("iTrack")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showingAddCategory = true
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.title2)
+                                .foregroundColor(.blue)
+                        }
+                    }
                     
                     if let user = userManager.currentUser {
                         Text("Welcome, \(user.username)")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
+                    
+                    Text("Round \(currentRound)")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding(.top, 5)
                 }
                 .padding(.top)
                 
                 Spacer()
                 
                 if showingSubcategories {
-                    CategoryDialView(
+                    CategoryDialViewWithProgress(
                         categories: dataManager.getCategories(for: userManager.currentUser?.id ?? UUID(), parentId: selectedCategory?.id),
                         onCategorySelected: { category in
-                            selectedCategory = category
-                            timerManager.startTracking(for: category, userId: userManager.currentUser?.id ?? UUID())
+                            if currentRound == 1 {
+                                currentRound = 2
+                            } else {
+                                selectedCategory = category
+                                timerManager.startTracking(for: category, userId: userManager.currentUser?.id ?? UUID())
+                            }
                         },
                         onTimerToggled: { category in
                             if timerManager.isTimerRunning {
@@ -39,8 +65,14 @@ struct HomeView: View {
                                 timerManager.resumeTracking()
                             }
                         },
+                        onCategoryLongPress: { category in
+                            categoryToRename = category
+                            newCategoryName = category.name
+                            showingRenameCategory = true
+                        },
                         isTimerRunning: timerManager.isTimerRunning,
-                        currentDuration: timerManager.currentDuration
+                        currentDuration: timerManager.currentDuration,
+                        currentRound: currentRound
                     )
                     
                     Button(action: {
@@ -54,7 +86,7 @@ struct HomeView: View {
                         .foregroundColor(.blue)
                     }
                 } else {
-                    CategoryDialView(
+                    CategoryDialViewWithProgress(
                         categories: dataManager.getCategories(for: userManager.currentUser?.id ?? UUID(), parentId: nil),
                         onCategorySelected: { category in
                             selectedCategory = category
@@ -62,7 +94,11 @@ struct HomeView: View {
                             if !subcategories.isEmpty {
                                 showingSubcategories = true
                             } else {
-                                timerManager.startTracking(for: category, userId: userManager.currentUser?.id ?? UUID())
+                                if currentRound == 1 {
+                                    currentRound = 2
+                                } else {
+                                    timerManager.startTracking(for: category, userId: userManager.currentUser?.id ?? UUID())
+                                }
                             }
                         },
                         onTimerToggled: { category in
@@ -72,8 +108,14 @@ struct HomeView: View {
                                 timerManager.resumeTracking()
                             }
                         },
+                        onCategoryLongPress: { category in
+                            categoryToRename = category
+                            newCategoryName = category.name
+                            showingRenameCategory = true
+                        },
                         isTimerRunning: timerManager.isTimerRunning,
-                        currentDuration: timerManager.currentDuration
+                        currentDuration: timerManager.currentDuration,
+                        currentRound: currentRound
                     )
                 }
                 
@@ -97,6 +139,12 @@ struct HomeView: View {
                     .padding(.horizontal)
                 }
             }
+        }
+        .sheet(isPresented: $showingAddCategory) {
+            AddCategoryView(dataManager: dataManager, userManager: userManager, isPresented: $showingAddCategory)
+        }
+        .sheet(isPresented: $showingRenameCategory) {
+            RenameCategoryView(category: categoryToRename, dataManager: dataManager, isPresented: $showingRenameCategory)
         }
     }
     
