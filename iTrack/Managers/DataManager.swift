@@ -12,10 +12,14 @@ class DataManager: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     
-    private let supabase = SupabaseClient(
-        supabaseURL: URL(string: "YOUR_SUPABASE_URL")!,
-        supabaseKey: "YOUR_SUPABASE_ANON_KEY"
-    )
+    // TODO: Configure Supabase credentials securely
+    // private let supabase = SupabaseClient(
+    //     supabaseURL: URL(string: "YOUR_SUPABASE_URL")!,
+    //     supabaseKey: "YOUR_SUPABASE_ANON_KEY"
+    // )
+    
+    // Temporary mock for development
+    private let supabase: SupabaseClient? = nil
     
     private var timer: Timer?
     private var currentUserId: UUID?
