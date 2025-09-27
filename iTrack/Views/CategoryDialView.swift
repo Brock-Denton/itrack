@@ -12,63 +12,87 @@ struct CategoryDialView: View {
     
     var body: some View {
         ZStack {
-            Circle()
-                .fill(Color.gray.opacity(0.1))
-                .frame(width: circleRadius * 2, height: circleRadius * 2)
-            
-            ForEach(Array(categories.enumerated()), id: \.element.id) { index, category in
-                let angle = Double(index) * (2 * .pi / Double(categories.count)) - .pi / 2
-                let x = cos(angle) * categoryRadius
-                let y = sin(angle) * categoryRadius
-                
-                Button(action: {
-                    onCategorySelected(category)
-                }) {
-                    VStack(spacing: 4) {
-                        Image(systemName: category.icon)
-                            .font(.title2)
-                            .foregroundColor(.white)
-                        Text(category.name)
-                            .font(.caption)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                    }
-                    .frame(width: 60, height: 60)
-                    .background(category.color.swiftUI)
-                    .clipShape(Circle())
-                }
-                .offset(x: x, y: y)
-            }
-            
-            VStack(spacing: 8) {
-                if isTimerRunning {
-                    Button(action: {
-                        if let currentCategory = categories.first {
-                            onTimerToggled(currentCategory)
-                        }
-                    }) {
-                        Image(systemName: "pause.circle.fill")
-                            .font(.system(size: 40))
-                            .foregroundColor(.red)
-                    }
-                    
-                    Text(formatTime(currentDuration))
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                } else {
-                    Button(action: {
-                        if let currentCategory = categories.first {
-                            onTimerToggled(currentCategory)
-                        }
-                    }) {
-                        Image(systemName: "play.circle.fill")
-                            .font(.system(size: 40))
-                            .foregroundColor(.blue)
-                    }
-                }
-            }
+            backgroundCircle
+            categoryButtons
+            centerControls
         }
         .frame(width: circleRadius * 2 + 80, height: circleRadius * 2 + 80)
+    }
+    
+    private var backgroundCircle: some View {
+        Circle()
+            .fill(Color.gray.opacity(0.1))
+            .frame(width: circleRadius * 2, height: circleRadius * 2)
+    }
+    
+    private var categoryButtons: some View {
+        ForEach(Array(categories.enumerated()), id: \.element.id) { index, category in
+            categoryButton(at: index, category: category)
+        }
+    }
+    
+    private func categoryButton(at index: Int, category: Category) -> some View {
+        let angle = Double(index) * (2 * .pi / Double(categories.count)) - .pi / 2
+        let x = cos(angle) * categoryRadius
+        let y = sin(angle) * categoryRadius
+        
+        return Button(action: {
+            onCategorySelected(category)
+        }) {
+            VStack(spacing: 4) {
+                Image(systemName: category.icon)
+                    .font(.title2)
+                    .foregroundColor(.white)
+                Text(category.name)
+                    .font(.caption)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+            }
+            .frame(width: 60, height: 60)
+            .background(category.color.swiftUI)
+            .clipShape(Circle())
+        }
+        .offset(x: x, y: y)
+    }
+    
+    private var centerControls: some View {
+        VStack(spacing: 8) {
+            if isTimerRunning {
+                timerRunningView
+            } else {
+                timerStoppedView
+            }
+        }
+    }
+    
+    private var timerRunningView: some View {
+        VStack(spacing: 8) {
+            Button(action: {
+                if let currentCategory = categories.first {
+                    onTimerToggled(currentCategory)
+                }
+            }) {
+                Image(systemName: "pause.circle.fill")
+                    .font(.system(size: 40))
+                    .foregroundColor(.red)
+            }
+            
+            Text(formatTime(currentDuration))
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+    }
+    
+    private var timerStoppedView: some View {
+        Button(action: {
+            if let currentCategory = categories.first {
+                onTimerToggled(currentCategory)
+            }
+        }) {
+            Image(systemName: "play.circle.fill")
+                .font(.system(size: 40))
+                .foregroundColor(.blue)
+        }
     }
     
     private func formatTime(_ timeInterval: TimeInterval) -> String {
