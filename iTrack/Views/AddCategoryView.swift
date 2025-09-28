@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct AddCategoryView: View {
-    @ObservedObject var dataManager: DataManager
-    @ObservedObject var userManager: UserManager
-    @Binding var isPresented: Bool
+    @EnvironmentObject var dataManager: AppDataManager
+    @Environment(\.dismiss) private var dismiss
     
     @State private var categoryName = ""
     @State private var selectedIcon = "folder"
@@ -15,7 +14,7 @@ struct AddCategoryView: View {
     ]
     
     private let availableColors: [Color] = [
-        .red, .orange, .yellow, .green, .blue, .purple, .pink, .brown, .gray, .black
+        .red, .orange, .yellow, .green, .blue, .purple, .pink, .brown, .gray, .indigo
     ]
     
     var body: some View {
@@ -73,9 +72,14 @@ struct AddCategoryView: View {
                 Spacer()
                 
                 Button(action: {
-                    createCategory()
+                    dataManager.addCategory(
+                        name: categoryName,
+                        color: ColorData(swiftUI: selectedColor),
+                        icon: selectedIcon
+                    )
+                    dismiss()
                 }) {
-                    Text("Create Category")
+                    Text("Add Category")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -90,31 +94,14 @@ struct AddCategoryView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading: Button("Cancel") {
-                    isPresented = false
-                },
-                trailing: Button("Create") {
-                    createCategory()
+                    dismiss()
                 }
-                .disabled(categoryName.isEmpty)
             )
         }
     }
-    
-    private func createCategory() {
-        guard !categoryName.isEmpty else { return }
-        
-        let newCategory = Category(
-            name: categoryName,
-            color: ColorData(swiftUI: selectedColor),
-            icon: selectedIcon,
-            parentId: nil,
-            userId: userManager.currentUser?.id ?? UUID(),
-            order: dataManager.getCategories(for: userManager.currentUser?.id ?? UUID(), parentId: nil).count,
-            createdAt: Date(),
-            isActive: true
-        )
-        
-        dataManager.addCategory(newCategory)
-        isPresented = false
-    }
+}
+
+#Preview {
+    AddCategoryView()
+        .environmentObject(AppDataManager())
 }

@@ -1,48 +1,46 @@
-//
-//  ContentView.swift
-//  iTrack
-//
-//  Created by Brock Denton on 9/27/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var userManager = UserManager()
+    @EnvironmentObject var dataManager: AppDataManager
     
     var body: some View {
         Group {
-            if userManager.currentUser != nil {
+            if dataManager.currentUser != nil {
                 MainTabView()
             } else {
-                LoginView(userManager: userManager)
+                WelcomeView()
             }
         }
-        .environmentObject(userManager)
     }
 }
 
 struct MainTabView: View {
-    @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var dataManager: AppDataManager
     
     var body: some View {
         TabView {
-            HomeView()
+            TimerView()
                 .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
+                    Image(systemName: "timer")
+                    Text("Timer")
                 }
             
             SummaryView()
                 .tabItem {
-                    Image(systemName: "chart.pie.fill")
+                    Image(systemName: "chart.pie")
                     Text("Summary")
                 }
             
-            NotesView()
+            GoalsView()
                 .tabItem {
-                    Image(systemName: "note.text")
-                    Text("Notes")
+                    Image(systemName: "target")
+                    Text("Goals")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
                 }
         }
     }
@@ -50,4 +48,5 @@ struct MainTabView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(AppDataManager())
 }
